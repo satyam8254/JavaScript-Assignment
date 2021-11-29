@@ -10,7 +10,7 @@ Instructions
 ```bash
 Example:
 Input - ["firstName", "Yash", "lastName": "Goyal"]
-Output - { firstName: "Yash", lastName: "Goyal" }
+Output - { firstName: "Yash", lastName: "Goral" }
 ```
 
 Run ```npm run test:file create_object``` to test your code
