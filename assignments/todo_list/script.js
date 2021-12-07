@@ -9,25 +9,29 @@ button.addEventListener('click', function() {
     paragraph.innerHTML = input.value
 
 
-    fetch("https://jsonplaceholder.typicode.com/todos", {
-            "method": "GET"
-        })
-        .then(response => {
-            return response.json();
-        })
-        .then(res => {
-            document.createElement('p')
-            console.log(res)
-        })
-        .catch(err => {
-            console.error(err);
-        })
-
-
-
 
     toDolist.appendChild(paragraph)
     paragraph.addEventListener('click', function() {
         toDolist.removeChild(paragraph)
     })
 });
+
+
+// var data = document.getElementsByClassName('api');
+// data.addEventListener('click', function() {
+//     var dataList = document.createElement('p');
+
+
+// })
+
+
+fetch("https://jsonplaceholder.typicode.com/todos", {
+        "method": "GET"
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(res => console.log(res))
+    .catch(err => {
+        console.error(err);
+    })
