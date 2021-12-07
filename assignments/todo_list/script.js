@@ -7,6 +7,25 @@ button.addEventListener('click', function() {
     paragraph.setAttribute("key", keyCount)
     keyCount = keyCount + 1
     paragraph.innerHTML = input.value
+
+
+    fetch("https://jsonplaceholder.typicode.com/todos", {
+            "method": "GET"
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(res => {
+            document.createElement('p')
+            console.log(res)
+        })
+        .catch(err => {
+            console.error(err);
+        })
+
+
+
+
     toDolist.appendChild(paragraph)
     paragraph.addEventListener('click', function() {
         toDolist.removeChild(paragraph)
